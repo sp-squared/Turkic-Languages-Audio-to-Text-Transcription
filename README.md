@@ -337,7 +337,7 @@ echo "The file size is $myfilesize bytes"
 - Indicates excellent embedding quality
 - Not used for generalization claims
 
-## 📝 **Updated Summary:**
+## 📝 **Summary:**
 
 Test Accuracy:       97.3%   ⭐
 Training Accuracy:   99.8%
