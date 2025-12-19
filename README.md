@@ -35,6 +35,7 @@ Whisper's open-endedness allowed me to very quickly prototype an ASR to Kazakh t
 ![screenshot](/project/images/dev05.png)
 ![screenshot](/project/images/dev06.png)
 ![screenshot](/project/images/dev07.png)
+![screenshot](/project/images/dev11.png)
 
 ## 🎯 Supported Languages
 
