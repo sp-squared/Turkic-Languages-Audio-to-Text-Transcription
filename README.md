@@ -32,6 +32,10 @@ Whisper's open-endedness allowed me to very quickly prototype an ASR to Kazakh t
 ![screenshot](/project/images/dev02.png)
 ![screenshot](/project/images/dev03.png)
 ![screenshot](/project/images/dev04.png)
+![screenshot](/project/images/dev05.png)
+![screenshot](/project/images/dev06.png)
+![screenshot](/project/images/dev07.png)
+![screenshot](/project/images/dev11.png)
 
 ## 🎯 Supported Languages
 
@@ -295,6 +299,12 @@ python whisper_transcribe_and_correct.py audio.m4a large kk
 ```
 
 ### Example 5: Using MMTEB/MTEB TurkicClassification
+
+#### Verify Byte Size of Each PKL File
+
+```bash
+ls -lh ~/Turkic-Languages-Audio-to-Text-Transcription/project/training_data/*.pkl
+```
 
 #### Verify Byte Size of Each TXT File
 
