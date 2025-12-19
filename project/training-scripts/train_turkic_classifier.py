@@ -91,6 +91,7 @@ for label, name in language_names.items():
 
 print("\n🔧 Building classifier pipeline...")
 
+# Simpler, more compatible version
 model = Pipeline([
     ('tfidf', TfidfVectorizer(
         analyzer='char',
@@ -101,16 +102,14 @@ model = Pipeline([
     )),
     ('classifier', LogisticRegression(
         max_iter=1000,
-        random_state=42,
-        multi_class='multinomial',
-        solver='lbfgs',
-        C=1.0
+        random_state=42
+        # Removed multi_class and solver parameters for compatibility
     ))
 ])
 
 print("   ✅ Pipeline created:")
 print("      1. TF-IDF Vectorizer (char n-grams 2-5)")
-print("      2. Logistic Regression (multinomial)")
+print("      2. Logistic Regression")
 
 print("\n🎓 Training model...")
 print("   This may take 30-60 seconds...")
