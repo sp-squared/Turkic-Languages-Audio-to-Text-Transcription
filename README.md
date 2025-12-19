@@ -611,6 +611,7 @@ note = {Multimodal toolbox for evaluating embeddings and retrieval systems}
 ```bibtex
 @software{Colin_Morris_turkic_asr_2025,
   author = {Colin Morris},
+  license = {MIT},
   title = {Turkic Languages Audio-to-Text Transcription: 
            Deterministic ASR Pipeline for Bashkir, Kazakh, and Kyrgyz},
   year = {2025},
