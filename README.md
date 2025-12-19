@@ -299,6 +299,12 @@ python whisper_transcribe_and_correct.py audio.m4a large kk
 
 ### Example 5: Using MMTEB/MTEB TurkicClassification
 
+#### Verify Byte Size of Each PKL File
+
+```bash
+ls -lh ~/Turkic-Languages-Audio-to-Text-Transcription/project/training_data/*.pkl
+```
+
 #### Verify Byte Size of Each TXT File
 
 ```bash
