@@ -77,12 +77,24 @@ Whisper's open-endedness allowed me to very quickly prototype an ASR to Kazakh t
 ## 🚀 Quick Start
 
 ### Prerequisites
-
+# Python
 ```bash
 # Python 3.8 or higher required
 python --version
+```
+# Virtual Environment
+```bash
+python -m venv turkic-env
+```
+
+or
+
+```bash
+python3 -m venv turkic-env
+```
 
 # Install required packages
+```bash
 pip install openai-whisper scikit-learn pandas numpy
 ```
 
@@ -148,28 +160,7 @@ git clone https://github.com/sp/Turkic-Languages-Audio-to-Text-Transcription.git
 cd Turkic-Languages-Audio-to-Text-Transcription
 ```
 
-### Step 2: Install Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-**Or manually:**
-
-```bash
-pip install openai-whisper
-pip install scikit-learn pandas numpy
-pip install ffmpeg-python  # For audio processing
-```
-
-### Step 3: Verify Installation
-
-```bash
-cd scripts
-python -c "import whisper; print('Whisper installed successfully!')"
-```
-
-### Step 4: Optional Virtual Environment
+### Step 2: Optional Virtual Environment
 
 ```bash
 python -m venv turkic-env
@@ -188,6 +179,27 @@ source turkic-env/Scripts/activate
 
 ```bash
 deactivate
+```
+
+### Step 3: Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+**Or manually:**
+
+```bash
+pip install openai-whisper
+pip install scikit-learn pandas numpy
+pip install ffmpeg-python  # For audio processing
+```
+
+### Step 4: Verify Installation
+
+```bash
+cd scripts
+python -c "import whisper; print('Whisper installed successfully!')"
 ```
 
 ## 💡 Usage Examples
