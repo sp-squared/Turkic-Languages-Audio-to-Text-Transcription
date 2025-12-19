@@ -2,7 +2,7 @@
 # Visit https://bit.ly/cffinit to generate yours today!
 
 cff-version: 1.2.0
-title: MTEB: Massive Text Embedding Benchmark
+title: muennighoff2022mteb
 message: >-
   MTEB is a Python framework for evaluating embeddings and
   retrieval systems for both text and image. MTEB covers
