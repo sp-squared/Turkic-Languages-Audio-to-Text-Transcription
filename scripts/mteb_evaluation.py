@@ -10,7 +10,7 @@ from sklearn.model_selection import cross_val_score
 from datasets import load_dataset
 
 print("📦 Loading your trained model...")
-model_path = Path("training_data/turkic_classifier.pkl")
+model_path = Path("/project/training_data/turkic_classifier.pkl")
 with open(model_path, 'rb') as f:
     full_pipeline = pickle.load(f)
 
