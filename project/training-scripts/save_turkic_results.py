@@ -33,7 +33,7 @@ for example in dataset['train']:
     
     # Convert if needed
     if has_latin_characters(text):
-        text = latin_to_cyrillic(text, "ky")
+        text = latin_to_cyrillic(text, "ba")
         converted_count += 1
     
     # Add to results
@@ -43,7 +43,7 @@ print(f"✓ Processed {len(results)} samples")
 print(f"✓ Converted {converted_count} samples from Latin to Cyrillic\n")
 
 # Define output path - changed to network location
-output_path = r'/home/colin/Turkic-Languages-Audio-to-Text-Transcription/project/data/turkic_kyrgyz_classification_results.txt'
+output_path = r'/home/colin/Turkic-Languages-Audio-to-Text-Transcription/project/data/turkic_bashkir_classification_results.txt'
 
 # Ensure the directory exists (for network paths, ensure you have permissions)
 try:
