@@ -340,17 +340,12 @@ echo "The file size is $myfilesize bytes"
 
 ## 📝 **Updated Summary:**
 ```
-╔════════════════════════════════════════╗
-║   YOUR CLASSIFIER PERFORMANCE          ║
-╠════════════════════════════════════════╣
-║ Test Accuracy:      97.3%    ⭐        ║  ← Report this!
-║ Training Accuracy:  99.8%              ║
-║ Cross-Validation:   100.0%   ℹ️         ║  ← For info only
-║                                        ║
-║ Model Size:         596 KB             ║
-║ Inference Time:     <1ms               ║
-║ Reproducibility:    100%               ║
-╚════════════════════════════════════════╝
+Test Accuracy:       97.3%   ⭐✅
+Training Accuracy:   99.8%
+Cross-Validation:   100.0%   ℹ️ ← For info only
+Model Size:         596 KB 
+Inference Time:       <1ms
+Reproducibility:      100%     
 
 ✅ REPORT: 97.3% test accuracy (proper evaluation)
 ℹ️  NOTE: Cross-val shows embeddings are excellent
