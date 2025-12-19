@@ -505,10 +505,7 @@ Contributions are welcome! Here's how you can help:
 
 ### Additional Resources
 
-- [Transcription Guide](docs/TRANSCRIPTION_GUIDE.md) - Detailed usage instructions
-- [Corrector Documentation](docs/CORRECTOR_GUIDE.md) - How the corrector works
-- [Training Guide](docs/TRAINING_GUIDE.md) - Train your own classifier
-- [Troubleshooting](docs/TROUBLESHOOTING.md) - Common issues and solutions
+- [Toolkit](projects/doc/TOOLKIT.md) - Detailed usage instructions
 
 ### Research & References
 
