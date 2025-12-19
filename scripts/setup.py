@@ -11,7 +11,7 @@ import sys
 # =============== CONFIGURATION ===============
 
 # Base directory - GitHub repository root
-BASE_DIR = Path(r"C:\Users\colin\Documents\GitHub\Turkic-Language-Audio-to-Text-Transcription")
+BASE_DIR = Path(r"YOUR DIRECTORY")
 
 # Data directory - where raw files are located
 DATA_DIR = BASE_DIR / "project" / "data"
