@@ -10,7 +10,7 @@ from collections import defaultdict
 print("📥 Downloading MMTEB TurkicClassification dataset...")
 print("=" * 70)
 
-dataset = load_dataset("mteb/TurkicClassification")
+dataset = load_dataset("mteb/TurkicClassification", "ba")
 
 print(f"✅ Downloaded successfully!")
 print(f"   Train samples: {len(dataset['train'])}")
