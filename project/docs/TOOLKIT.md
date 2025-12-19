@@ -415,17 +415,9 @@ Kyrgyz          0       0     307
 
 ## 📚 Documentation
 
-### Main Guides
+### Additional Resources
 
-- **[README_TRAINING.md](project/training_data/README_TRAINING.md)** - Complete training guide
-- **[QUICK_START.md](project/training_data/QUICK_START.md)** - Fast setup instructions
-- **[EDITING_GUIDE.md](project/training_data/EDITING_GUIDE.md)** - File path configuration
-
-### Technical Documentation
-
-- **[fine_tuning_guide.md](project/training_data/fine_tuning_guide.md)** - Deep dive into model fine-tuning
-- **[transliteration_edge_cases.md](project/training_data/transliteration_edge_cases.md)** - Transliteration details
-- **[code_breakdown.md](project/training_data/code_breakdown.md)** - Line-by-line code explanation
+- [Toolkit](project/docs/TOOLKIT.md) - This file
 
 ### Interactive Learning
 
