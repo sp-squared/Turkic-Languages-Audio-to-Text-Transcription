@@ -14,7 +14,7 @@ YELLOW='\033[1;33m'
 BLUE='\033[0;34m'
 NC='\033[0m'
 
-PROJECT_ROOT="$HOME/Turkic-Languages-Audio-to-Text-Transcription"
+PROJECT_ROOT="C:\Users\colin\Documents\GitHub\Turkic-Languages-Audio-to-Text-Transcription"
 
 echo "========================================================================"
 echo "  ROLLBACK CLEANUP - RESTORE ARCHIVED FILES (v2)"
