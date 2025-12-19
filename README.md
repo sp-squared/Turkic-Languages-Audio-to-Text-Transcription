@@ -285,7 +285,7 @@ python whisper_transcribe_and_correct.py audio.m4a large kk
 
 ### Example 5: Using MMTEB/MTEB TurkicClassification
 
-# Verify Byte Size of Each TXT File
+#### Verify Byte Size of Each TXT File
 
 ```bash
 myfilesize=$(wc -c "BASHKIR_TXT_FILE_LOCATION" | cut -d ' ' -f1)
