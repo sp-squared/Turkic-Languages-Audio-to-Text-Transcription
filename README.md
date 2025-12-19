@@ -537,7 +537,7 @@ Special thanks to all researchers working on low-resource language technology.
 
 ## 📧 Contact
 
-- **GitHub Issues:** [Report bugs or request features](https://github.com/yourusername/Turkic-Languages-Audio-to-Text-Transcription/issues)
+- **GitHub Issues:** [Report bugs or request features](https://github.com/sp-squared/Turkic-Languages-Audio-to-Text-Transcription/issues)
 - **Discussions:** [Ask questions or share ideas](https://github.com/sp-squared/Turkic-Languages-Audio-to-Text-Transcription/discussions)
 - **Email:** [colin.morris.r@gmail.com]
 
