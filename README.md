@@ -236,7 +236,7 @@ Files created:
 ### Example 2: Classify Language of Existing Text
 
 ```bash
-cd project/training_scripts
+cd project/training-scripts
 python use_turkic_classifier.py
 ```
 
