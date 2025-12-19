@@ -326,26 +326,28 @@ echo "The file size is $myfilesize bytes"
 ### Evaluation Results
 
 **Test Set Performance:** 97.3% accuracy
+
 - Training: 5,222 samples
 - Testing: 922 held-out samples
 - Method: Single train/test split (85/15)
 
 **Cross-Validation:** 100% accuracy (5-fold CV)
+
 - Note: Evaluated using pre-trained TF-IDF embeddings
 - Indicates excellent embedding quality
 - Not used for generalization claims
-```
 
----
+```
 
 ## 📝 **Updated Summary:**
 ```
+
 Test Accuracy:       97.3%   ⭐✅
 Training Accuracy:   99.8%
 Cross-Validation:   100.0%   ℹ️ ← For info only
-Model Size:         596 KB 
+Model Size:         596 KB
 Inference Time:       <1ms
-Reproducibility:      100%     
+Reproducibility:      100%
 
 ✅ REPORT: 97.3% test accuracy (proper evaluation)
 ℹ️  NOTE: Cross-val shows embeddings are excellent
@@ -480,6 +482,7 @@ This completes the open science cycle: we benefit from open resources and contri
 ### MIT License
 
 ```
+
 MIT License
 
 Copyright (c) 2024 Colin Morris-Moncada
@@ -501,6 +504,7 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
 ```
 
 **What this means:**
