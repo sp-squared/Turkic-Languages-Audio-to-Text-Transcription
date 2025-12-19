@@ -2,7 +2,7 @@
 # Visit https://bit.ly/cffinit to generate yours today!
 
 cff-version: 1.2.0
-title: Multilingual_Text_Embedding_Benchmark
+title: MTEB:_Multilingual_Text_Embedding_Benchmark
 message: >-
   MTEB is a Python framework for evaluating embeddings and
   retrieval systems for both text and image. MTEB covers
