@@ -1,4 +1,4 @@
-# Turkic Languages Audio-to-Text Transcription
+# Turkic Languages Audio-to-Text Transcription Toolkit
 
 A comprehensive toolkit for Turkic language processing, including text classification, transliteration, and transcription utilities for **Bashkir**, **Kazakh**, and **Kyrgyz** languages.
 
