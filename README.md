@@ -26,6 +26,8 @@ Whisper's open-endedness allowed me to very quickly prototype an ASR to Kazakh t
 
 *Application screenshots will be added during development*
 
+### Using MMTEB/MTEB TurkicClassification
+
 ![screenshot](/project/images/dev01.png)
 ![screenshot](/project/images/dev02.png)
 ![screenshot](/project/images/dev03.png)
