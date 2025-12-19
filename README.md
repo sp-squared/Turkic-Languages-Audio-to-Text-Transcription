@@ -548,7 +548,7 @@ Special thanks to all researchers working on low-resource language technology.
 
 If you find this project useful, please consider giving it a star! It helps others discover this work.
 
-[![Star History Chart](https://api.star-history.com/svg?repos=sp-squared/Turkic-Languages-Audio-to-Text-Transcription&type=Date)](https://star-history.com/sp-squared/Turkic-Languages-Audio-to-Text-Transcription&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=sp-squared/Turkic-Languages-Audio-to-Text-Transcription&type=date&legend=top-left)](https://www.star-history.com/#sp-squared/Turkic-Languages-Audio-to-Text-Transcription&type=date&legend=top-left)
 
 ## 📊 Project Status
 
