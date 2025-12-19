@@ -505,7 +505,7 @@ Contributions are welcome! Here's how you can help:
 
 ### Additional Resources
 
-- [Toolkit](project/doc/TOOLKIT.md) - Detailed usage instructions
+- [Toolkit](project/docs/TOOLKIT.md) - Detailed usage instructions
 
 ### Research & References
 
