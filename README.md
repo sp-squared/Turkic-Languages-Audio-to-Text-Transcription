@@ -177,6 +177,13 @@ cd Turkic-Languages-Audio-to-Text-Transcription
 source turkic-env/Scripts/activate
 ```
 
+or
+
+```bash
+cd Turkic-Languages-Audio-to-Text-Transcription
+source turkic-env/bin/activate
+```
+
 ```bash
 deactivate
 ```
