@@ -339,7 +339,7 @@ echo "The file size is $myfilesize bytes"
 
 ## 📝 **Updated Summary:**
 
-Test Accuracy:       97.3%   ⭐✅
+Test Accuracy:       97.3%   ⭐
 Training Accuracy:   99.8%
 Cross-Validation:   100.0%   ℹ️ ← For info only
 Model Size:         596 KB
