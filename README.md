@@ -200,6 +200,7 @@ pip install -r requirements.txt
 pip install openai-whisper
 pip install scikit-learn pandas numpy
 pip install ffmpeg-python  # For audio processing
+pip install mteb
 ```
 
 ### Step 4: Verify Installation
