@@ -2,9 +2,10 @@
 
 A comprehensive toolkit for Turkic language processing, including text classification, transliteration, and transcription utilities for **Bashkir**, **Kazakh**, and **Kyrgyz** languages.
 
-[![Python](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Open Science](https://img.shields.io/badge/Open-Science-blue.svg)](https://en.wikipedia.org/wiki/Open_science)
-[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+![Static Badge](https://img.shields.io/badge/This%20is%20the%20frontier.-8A2BE2)
 
 ---
 
