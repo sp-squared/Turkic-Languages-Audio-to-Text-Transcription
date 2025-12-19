@@ -1,6 +1,18 @@
 #!/usr/bin/env python3
 """
 Download MMTEB TurkicClassification Dataset (Combined Format)
+
+Downloads and combines train+test splits into single files per language
+
+Usage:
+    cd /home/colin/Turkic-Languages-Audio-to-Text-Transcription/project/training-scripts
+    python download_mmteb_combined.py
+    
+Output:
+    /home/colin/Turkic-Languages-Audio-to-Text-Transcription/project/data/
+    ├── bashkir_combined.txt (all samples)
+    ├── kazakh_combined.txt (all samples)
+    └── kyrgyz_combined.txt (all samples)
 """
 
 from datasets import load_dataset
@@ -10,33 +22,40 @@ from collections import defaultdict
 print("📥 Downloading MMTEB TurkicClassification dataset...")
 print("=" * 70)
 
-dataset = load_dataset("mteb/TurkicClassification", "ba")
+# Download dataset
+dataset = load_dataset("mteb/TurkicClassification")
 
 print(f"✅ Downloaded successfully!")
-print(f"   Train samples: {len(dataset['train'])}")
-print(f"   Test samples: {len(dataset['test'])}")
+
+# Check what splits exist
+available_splits = list(dataset.keys())
+print(f"   Available splits: {available_splits}")
+print(f"   Total samples: {sum(len(dataset[split]) for split in available_splits)}")
 print()
 
+# Label mapping
 label_to_language = {
     0: 'bashkir',
     1: 'kazakh',
     2: 'kyrgyz'
 }
 
+# Create output directory
 output_dir = Path(__file__).parent.parent / "data"
 output_dir.mkdir(parents=True, exist_ok=True)
 
-print("📝 Processing all data (train + test combined)...")
+# Combine all data from all splits
+print("📝 Processing all data from all available splits...")
 all_data = defaultdict(list)
 
-for sample in dataset['train']:
-    language = label_to_language[sample['label']]
-    all_data[language].append(sample['text'])
+# Process all available splits
+for split_name in available_splits:
+    print(f"   Processing '{split_name}' split ({len(dataset[split_name])} samples)...")
+    for sample in dataset[split_name]:
+        language = label_to_language[sample['label']]
+        all_data[language].append(sample['text'])
 
-for sample in dataset['test']:
-    language = label_to_language[sample['label']]
-    all_data[language].append(sample['text'])
-
+# Save combined files
 print()
 for language, texts in all_data.items():
     filepath = output_dir / f"{language}_combined.txt"
@@ -56,6 +75,5 @@ for language, texts in all_data.items():
 print()
 print(f"📂 Files saved to: {output_dir.absolute()}")
 print()
-print("⚠️  WARNING: These files contain BOTH train and test data!")
-print("   For proper evaluation, use download_mmteb_dataset.py instead")
-print("   to keep train/test separate.")
+print("ℹ️  Note: This dataset only has a 'train' split.")
+print("   You'll need to create your own train/test split for evaluation.")
