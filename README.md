@@ -206,7 +206,7 @@ pip install ffmpeg-python  # For audio processing
 
 ```bash
 cd scripts
-python -c "import whisper; print('Whisper installed successfully!')"
+python -c "import whisper; print('Whisper installed successfully')"
 ```
 
 ## 💡 Usage Examples
