@@ -1,0 +1,62 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual Environment
+turkic-env/
+venv/
+env/
+ENV/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# Output files
+output/*.txt
+output/*.json
+output/*.log
+
+# Audio files (can be large)
+audio/*.m4a
+audio/*.wav
+audio/*.mp3
+audio/*.flac
+
+# Keep example audio
+!audio/example_*.m4a
+!audio/example_*.wav
+
+# Trained models (optional - comment out if you want to version them)
+# training_data/*.pkl
+
+# OS
+.DS_Store
+Thumbs.db
+.directory
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Temporary files
+*.tmp
+.cache/
+temp/
+
+# Logs
+*.log
+logs/
+
+# Data files (optional - uncomment if data is too large)
+# project/data/*.txt

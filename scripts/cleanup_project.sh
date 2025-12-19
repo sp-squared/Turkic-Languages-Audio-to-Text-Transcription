@@ -21,7 +21,7 @@ BLUE='\033[0;34m'
 NC='\033[0m' # No Color
 
 # Project root
-PROJECT_ROOT="$HOME/Turkic-Languages-Audio-to-Text-Transcription"
+PROJECT_ROOT="C:\Users\colin\Documents\GitHub\Turkic-Languages-Audio-to-Text-Transcription"
 
 echo "========================================================================"
 echo "  TURKIC LANGUAGES PROJECT CLEANUP SCRIPT"
