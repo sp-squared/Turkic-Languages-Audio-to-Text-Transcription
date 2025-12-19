@@ -605,7 +605,7 @@ If you find this project useful, please consider giving it a star! It helps othe
 If you use this work in your research, please cite:
 
 ```bibtex
-@software{Niklas_Muennighoff_muennighoff2022mteb,
+@software{Niklas_Muennighoff_Multilingual_Text_Embedding_Benchmark,
 author = {Niklas Muennighoff},
 license = {Apache-2.0},
 title = {{MTEB: Massive Text Embedding Benchmark}},
@@ -616,7 +616,7 @@ note = {Multimodal toolbox for evaluating embeddings and retrieval systems}
 ```
 
 ```bibtex
-@software{Colin_Morris_turkic_asr_2025,
+@software{Colin_Morris_Turkic_Languages_Audio_to_Text_Transcription,
   author = {Colin Morris},
   license = {MIT},
   title = {Turkic Languages Audio-to-Text Transcription: 
