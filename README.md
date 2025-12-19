@@ -337,10 +337,7 @@ echo "The file size is $myfilesize bytes"
 - Indicates excellent embedding quality
 - Not used for generalization claims
 
-```
-
 ## 📝 **Updated Summary:**
-```
 
 Test Accuracy:       97.3%   ⭐✅
 Training Accuracy:   99.8%
@@ -352,7 +349,6 @@ Reproducibility:      100%
 ✅ REPORT: 97.3% test accuracy (proper evaluation)
 ℹ️  NOTE: Cross-val shows embeddings are excellent
 
-```
 ## 🔬 Technical Details
 
 ### Orthography Correction Rules
