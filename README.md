@@ -77,12 +77,16 @@ Whisper's open-endedness allowed me to very quickly prototype an ASR to Kazakh t
 ## 🚀 Quick Start
 
 ### Prerequisites
+
 # Python
+
 ```bash
 # Python 3.8 or higher required
 python --version
 ```
+
 # Virtual Environment
+
 ```bash
 python -m venv turkic-env
 ```
@@ -94,6 +98,7 @@ python3 -m venv turkic-env
 ```
 
 # Install required packages
+
 ```bash
 pip install openai-whisper scikit-learn pandas numpy
 ```
@@ -277,6 +282,21 @@ python whisper_transcribe_and_correct.py audio.m4a medium kk
 # Large model (best quality, slower)
 python whisper_transcribe_and_correct.py audio.m4a large kk
 ```
+
+### Example 5: Using MMTEB/MTEB TurkicClassification
+
+## Verify Byte Size of Each TXT File
+
+```bash
+myfilesize=$(wc -c "BASHKIR_TXT_FILE_LOCATION" | cut -d ' ' -f1)
+echo "The file size is $myfilesize bytes"   
+
+myfilesize=$(wc -c "KAZAKH_TXT_FILE_LOCATION" | cut -d ' ' -f1)
+echo "The file size is $myfilesize bytes" 
+
+myfilesize=$(wc -c "/KYRGYZ_TXT_FILE_LOCATION" | cut -d ' ' -f1)
+echo "The file size is $myfilesize bytes"
+````
 
 ## 🔬 Technical Details
 
