@@ -156,7 +156,7 @@ Turkic-Languages-Audio-to-Text-Transcription/
 ### Step 1: Clone Repository
 
 ```bash
-git clone https://github.com/sp/Turkic-Languages-Audio-to-Text-Transcription.git
+git clone https://github.com/sp-sqaured/Turkic-Languages-Audio-to-Text-Transcription.git
 cd Turkic-Languages-Audio-to-Text-Transcription
 ```
 
