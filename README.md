@@ -26,18 +26,36 @@ Whisper's open-endedness allowed me to very quickly prototype an ASR to Kazakh t
 
 *Application screenshots will be added during development*
 
-### Using MMTEB/MTEB TurkicClassification
+## Using MMTEB/MTEB TurkicClassification
+
+### Turkic Converted Results
 
 ![screenshot](/project/images/dev01.png)
 ![screenshot](/project/images/dev02.png)
 ![screenshot](/project/images/dev03.png)
+
+### Classification File Sizes
+
 ![screenshot](/project/images/dev04.png)
+
+### Train Turkic Classifier
+
 ![screenshot](/project/images/dev05.png)
 ![screenshot](/project/images/dev06.png)
 ![screenshot](/project/images/dev07.png)
+
+### Classifier File Sizes
+
 ![screenshot](/project/images/dev11.png)
+
+### MTEB-Style Evaluation
+
 ![screenshot](/project/images/dev12.png)
 ![screenshot](/project/images/dev13.png)
+![screenshot](/project/images/dev14.png)
+
+### Cleanup Files Output Summary
+
 ![screenshot](/project/images/dev14.png)
 
 ## 🎯 Supported Languages
