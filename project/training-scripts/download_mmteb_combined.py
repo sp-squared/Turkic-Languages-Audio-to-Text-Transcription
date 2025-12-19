@@ -23,7 +23,7 @@ print("📥 Downloading MMTEB TurkicClassification dataset...")
 print("=" * 70)
 
 # Download dataset
-dataset = load_dataset("mteb/TurkicClassification")
+dataset = load_dataset("mteb/TurkicClassification", "ba")
 
 print(f"✅ Downloaded successfully!")
 
