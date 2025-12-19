@@ -165,8 +165,9 @@ Turkic-Languages-Audio-to-Text-Transcription/
 │       ├── use_turkic_classifier.py
 │       ├── train_fasttext_turkic.py
 │       └── train_transformer.py
-├── training_data/                  # Processed training samples
-│   └── langid_sklearn_model.pkl    # Trained classifier (896 KB)
+├── training_data/                      # Processed training samples
+│   └──    turkic_classifier.pkl        # Trained classifier (596 KB)
+    └──    turkic_classifier_full.pkl   # Full-data model (596 KB)
 ├── LICENSE                         # MIT License
 └── README.md                       # This file
 ```
@@ -347,13 +348,24 @@ The deterministic corrector applies the following transformations:
 
 ### Language Classification
 
-Trained on MMTEB TurkicClassification dataset:
+Trained on mteb/TurkicClassification dataset:
 
-- **Training samples:** 5,219 (1,739 Bashkir, 1,740 Kazakh, 1,740 Kyrgyz)
-- **Test samples:** 922 (held-out evaluation set)
-- **Method:** TF-IDF (character n-grams 2-5) + Logistic Regression
-- **Model size:** 896 KB
+- **Dataset:** 6,144 total samples (2,048 per language: Bashkir, Kazakh, Kyrgyz)
+- **Training samples:** 5,222 (85% split)
+  - Bashkir: 1,741 samples
+  - Kazakh: 1,741 samples
+  - Kyrgyz: 1,740 samples
+- **Test samples:** 922 (15% held-out set)
+  - Bashkir: 307 samples
+  - Kazakh: 307 samples
+  - Kyrgyz: 308 samples
+- **Method:** TF-IDF Vectorizer (character n-grams 2-5) + Logistic Regression
+- **Training accuracy:** 99.8%
+- **Test accuracy:** 97.3% (on held-out data)
+- **Model size:** 596 KB
+- **Features:** 10,000 character n-grams
 - **Inference time:** <1ms per sample
+- **Reproducibility:** Deterministic (same input → same output always)
 
 ## 📊 Performance
 
