@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 """
-Download Electrotubbie's Turkic Languages Dataset (Method 1: datasets library)
+Download Electrotubbie's Turkic Languages Dataset - ROBUST VERSION
 
-Usage:
-    python download_turkic_dataset_v1.py
+Automatically detects field names regardless of structure.
 """
 
 from datasets import load_dataset
@@ -11,7 +10,6 @@ from pathlib import Path
 from collections import defaultdict, Counter
 
 print("📥 Downloading Electrotubbie's Turkic Languages Dataset...")
-print("   Method: datasets.load_dataset()")
 print("=" * 70)
 
 # Load dataset
@@ -19,11 +17,10 @@ ds = load_dataset("Electrotubbie/classification_Turkic_languages")
 
 print(f"✅ Downloaded successfully!")
 
-# Check structure
+# Get data
 available_splits = list(ds.keys())
 print(f"   Available splits: {available_splits}")
 
-# Get data
 if 'train' in ds:
     data = ds['train']
 else:
@@ -32,92 +29,165 @@ else:
 print(f"   Total samples: {len(data)}")
 print()
 
-# Inspect first sample
+# Inspect first sample to understand structure
 print("🔍 Dataset structure:")
 first_sample = data[0]
-print(f"   Columns: {list(first_sample.keys())}")
-print(f"\n   First sample:")
-for key, value in first_sample.items():
-    if isinstance(value, str) and len(value) > 80:
-        print(f"     {key}: {value[:80]}...")
-    else:
-        print(f"     {key}: {value}")
+all_fields = list(first_sample.keys())
+print(f"   All fields: {all_fields}")
 print()
 
-# Determine label field name
-label_field = None
-for field in ['label', 'labels', 'category', 'language', 'lang']:
-    if field in first_sample:
-        label_field = field
-        break
+print("   First sample content:")
+for field, value in first_sample.items():
+    if isinstance(value, str):
+        display_value = value[:80] + "..." if len(value) > 80 else value
+    else:
+        display_value = value
+    print(f"     {field}: {display_value}")
+print()
 
-if not label_field:
-    print("❌ Could not find label field!")
-    print(f"   Available fields: {list(first_sample.keys())}")
+# Auto-detect label field (usually the non-text field)
+label_field = None
+text_field = None
+
+# Strategy: text field has long strings, label field has short values
+for field in all_fields:
+    sample_value = first_sample[field]
+    
+    # Check if this looks like a text field
+    if isinstance(sample_value, str) and len(sample_value) > 50:
+        text_field = field
+    # Check if this looks like a label field
+    elif isinstance(sample_value, (int, str)) and (not isinstance(sample_value, str) or len(str(sample_value)) < 20):
+        label_field = field
+
+# If auto-detection failed, ask user or make educated guess
+if not text_field:
+    print("❌ Could not auto-detect text field!")
+    print(f"   Available fields: {all_fields}")
+    print("   Please manually identify the text field and update the script.")
     exit(1)
 
-print(f"📊 Using '{label_field}' as label field")
+if not label_field:
+    print("❌ Could not auto-detect label field!")
+    print(f"   Available fields: {all_fields}")
+    print("   Please manually identify the label field and update the script.")
+    exit(1)
 
-# Count labels
+print(f"✅ Detected fields:")
+print(f"   Text field: '{text_field}'")
+print(f"   Label field: '{label_field}'")
+print()
+
+# Get all labels
 all_labels = [sample[label_field] for sample in data]
 label_counts = Counter(all_labels)
 unique_labels = sorted(set(all_labels))
 
+print(f"📊 Label analysis:")
 print(f"   Unique labels: {unique_labels}")
-print(f"\n   Distribution:")
-for label, count in sorted(label_counts.items()):
-    print(f"     {label}: {count} samples")
+print(f"   Number of languages: {len(unique_labels)}")
 print()
 
-# Show sample text for each label
-print("🔍 Sample texts per label:")
+print("   Distribution:")
+for label, count in sorted(label_counts.items()):
+    print(f"     {label}: {count} samples ({count/len(data)*100:.1f}%)")
+print()
+
+# Show sample text for each label (to help identify languages)
+print("🔍 Sample text for each label:")
 for label in unique_labels:
     for sample in data:
         if sample[label_field] == label:
-            text_field = 'text' if 'text' in sample else 'sentence'
             text = sample[text_field][:100]
-            print(f"   {label}: {text}...")
+            print(f"   Label '{label}': {text}...")
             break
 print()
 
-# Create label mapping
-print("📝 Creating label mapping...")
+# Create label mapping with better detection
+print("📝 Creating language mapping...")
 label_to_language = {}
 
 for label in unique_labels:
     label_str = str(label).lower()
     
-    # Try to detect language
-    if label in [0, '0', 'ba', 'bashkir', 'Bashkir', 'bak']:
+    # Multiple detection strategies
+    detected = False
+    
+    # Strategy 1: Exact matches
+    if label in [0, '0', 'ba', 'bashkir', 'Bashkir', 'bak', 'bas']:
         label_to_language[label] = 'bashkir'
+        detected = True
     elif label in [1, '1', 'kk', 'kazakh', 'Kazakh', 'kaz']:
         label_to_language[label] = 'kazakh'
-    elif label in [2, '2', 'ky', 'kyrgyz', 'Kyrgyz', 'Kirghiz', 'kir']:
+        detected = True
+    elif label in [2, '2', 'ky', 'kyrgyz', 'Kyrgyz', 'Kirghiz', 'kir', 'kyr']:
         label_to_language[label] = 'kyrgyz'
-    elif 'bash' in label_str:
-        label_to_language[label] = 'bashkir'
-    elif 'kaz' in label_str:
-        label_to_language[label] = 'kazakh'
-    elif 'kyr' in label_str or 'kir' in label_str:
-        label_to_language[label] = 'kyrgyz'
-    else:
-        # Unknown - ask user or use label as-is
-        label_to_language[label] = f"language_{label}"
+        detected = True
+    
+    # Strategy 2: Substring matching
+    if not detected:
+        if 'bash' in label_str or 'баш' in label_str:
+            label_to_language[label] = 'bashkir'
+            detected = True
+        elif 'kaz' in label_str or 'каз' in label_str or 'qaz' in label_str:
+            label_to_language[label] = 'kazakh'
+            detected = True
+        elif 'kyr' in label_str or 'kir' in label_str or 'қыр' in label_str:
+            label_to_language[label] = 'kyrgyz'
+            detected = True
+    
+    # Strategy 3: Use sample text to detect (look for specific characters)
+    if not detected:
+        # Get a sample text for this label
+        sample_texts = [sample[text_field] for sample in data if sample[label_field] == label][:10]
+        combined_sample = ' '.join(sample_texts[:3])
+        
+        # Bashkir-specific characters: ҡ, ғ, ҙ, ҫ, ү, һ, ә, ө
+        # Kazakh-specific: ұ, қ, ң, ғ, ү, ұ, һ, і, ә, ө
+        # Kyrgyz-specific: ң, ү, ө
+        
+        bashkir_chars = set('ҡҙҫ')
+        kazakh_chars = set('ұі')
+        
+        text_chars = set(combined_sample.lower())
+        
+        if bashkir_chars & text_chars:
+            label_to_language[label] = 'bashkir'
+            detected = True
+        elif kazakh_chars & text_chars:
+            label_to_language[label] = 'kazakh'
+            detected = True
+    
+    # Fallback: couldn't detect
+    if not detected:
+        label_to_language[label] = f"unknown_{label}"
+        print(f"   ⚠️  Warning: Couldn't identify label '{label}'")
 
+print()
 for label, language in sorted(label_to_language.items()):
     count = label_counts[label]
     print(f"   {label} → {language} ({count} samples)")
 print()
+
+# Ask user to confirm if any unknowns
+unknowns = [lang for lang in label_to_language.values() if lang.startswith('unknown_')]
+if unknowns:
+    print("⚠️  WARNING: Some labels could not be identified!")
+    print("   Please review the sample texts above and update the mapping.")
+    print()
+    response = input("Continue anyway? (y/n): ")
+    if response.lower() != 'y':
+        print("Aborted.")
+        exit(0)
+    print()
 
 # Create output directory
 output_dir = Path(__file__).parent.parent / "data"
 output_dir.mkdir(parents=True, exist_ok=True)
 
 # Group by language
-print("📝 Grouping data by language...")
+print("📝 Grouping and saving data...")
 data_by_language = defaultdict(list)
-
-text_field = 'text' if 'text' in first_sample else 'sentence'
 
 for sample in data:
     label = sample[label_field]
