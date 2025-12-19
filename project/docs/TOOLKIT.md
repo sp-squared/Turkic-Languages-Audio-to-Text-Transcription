@@ -1,10 +1,11 @@
-# Turkic Languages Audio-to-Text Transcription
+# Turkic Languages Audio-to-Text Transcription Toolkit
 
 A comprehensive toolkit for Turkic language processing, including text classification, transliteration, and transcription utilities for **Bashkir**, **Kazakh**, and **Kyrgyz** languages.
 
-[![Python](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Open Science](https://img.shields.io/badge/Open-Science-blue.svg)](https://en.wikipedia.org/wiki/Open_science)
-[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+![Static Badge](https://img.shields.io/badge/This%20is%20the%20frontier.-8A2BE2)
 
 ---
 
@@ -414,17 +415,9 @@ Kyrgyz          0       0     307
 
 ## 📚 Documentation
 
-### Main Guides
+### Additional Resources
 
-- **[README_TRAINING.md](project/training_data/README_TRAINING.md)** - Complete training guide
-- **[QUICK_START.md](project/training_data/QUICK_START.md)** - Fast setup instructions
-- **[EDITING_GUIDE.md](project/training_data/EDITING_GUIDE.md)** - File path configuration
-
-### Technical Documentation
-
-- **[fine_tuning_guide.md](project/training_data/fine_tuning_guide.md)** - Deep dive into model fine-tuning
-- **[transliteration_edge_cases.md](project/training_data/transliteration_edge_cases.md)** - Transliteration details
-- **[code_breakdown.md](project/training_data/code_breakdown.md)** - Line-by-line code explanation
+- [Toolkit](project/docs/TOOLKIT.md) - This file
 
 ### Interactive Learning
 

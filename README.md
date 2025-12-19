@@ -3,6 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Open Science](https://img.shields.io/badge/Open-Science-blue.svg)](https://en.wikipedia.org/wiki/Open_science)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+![Static Badge](https://img.shields.io/badge/This%20is%20the%20frontier.-8A2BE2)
 
 Open-source Automatic Speech Recognition (ASR) pipeline for Bashkir (Bashkort), Kazakh, and Kyrgyz languages with deterministic orthography correction.
 
@@ -76,12 +77,24 @@ Whisper's open-endedness allowed me to very quickly prototype an ASR to Kazakh t
 ## 🚀 Quick Start
 
 ### Prerequisites
-
+# Python
 ```bash
 # Python 3.8 or higher required
 python --version
+```
+# Virtual Environment
+```bash
+python -m venv turkic-env
+```
+
+or
+
+```bash
+python3 -m venv turkic-env
+```
 
 # Install required packages
+```bash
 pip install openai-whisper scikit-learn pandas numpy
 ```
 
@@ -143,32 +156,11 @@ Turkic-Languages-Audio-to-Text-Transcription/
 ### Step 1: Clone Repository
 
 ```bash
-git clone https://github.com/sp/Turkic-Languages-Audio-to-Text-Transcription.git
+git clone https://github.com/sp-squared/Turkic-Languages-Audio-to-Text-Transcription.git
 cd Turkic-Languages-Audio-to-Text-Transcription
 ```
 
-### Step 2: Install Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-**Or manually:**
-
-```bash
-pip install openai-whisper
-pip install scikit-learn pandas numpy
-pip install ffmpeg-python  # For audio processing
-```
-
-### Step 3: Verify Installation
-
-```bash
-cd scripts
-python -c "import whisper; print('Whisper installed successfully!')"
-```
-
-### Step 4: Optional Virtual Environment
+### Step 2: Optional Virtual Environment
 
 ```bash
 python -m venv turkic-env
@@ -185,8 +177,36 @@ cd Turkic-Languages-Audio-to-Text-Transcription
 source turkic-env/Scripts/activate
 ```
 
+or
+
+```bash
+cd Turkic-Languages-Audio-to-Text-Transcription
+source turkic-env/bin/activate
+```
+
 ```bash
 deactivate
+```
+
+### Step 3: Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+**Or manually:**
+
+```bash
+pip install openai-whisper
+pip install scikit-learn pandas numpy
+pip install ffmpeg-python  # For audio processing
+```
+
+### Step 4: Verify Installation
+
+```bash
+cd scripts
+python -c "import whisper; print('Whisper installed successfully!')"
 ```
 
 ## 💡 Usage Examples
@@ -585,8 +605,20 @@ If you find this project useful, please consider giving it a star! It helps othe
 If you use this work in your research, please cite:
 
 ```bibtex
-@software{turkic_asr_2025,
+@software{Niklas_Muennighoff_muennighoff2022mteb,
+author = {Niklas Muennighoff},
+license = {Apache-2.0},
+title = {{MTEB: Massive Text Embedding Benchmark}},
+url = {https://github.com/embeddings-benchmark/mteb}
+year={2022}
+note = {Multimodal toolbox for evaluating embeddings and retrieval systems}
+}
+```
+
+```bibtex
+@software{Colin_Morris_turkic_asr_2025,
   author = {Colin Morris},
+  license = {MIT},
   title = {Turkic Languages Audio-to-Text Transcription: 
            Deterministic ASR Pipeline for Bashkir, Kazakh, and Kyrgyz},
   year = {2025},

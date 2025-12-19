@@ -1,12 +1,24 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
 cff-version: 1.2.0
-message: "If you use this software, please cite it as below."
+title: muennighoff2022mteb
+message: >-
+  MTEB is a Python framework for evaluating embeddings and
+  retrieval systems for both text and image. MTEB covers
+  more than 1000 languages and diverse tasks, from classics
+  like classification and clustering to use-case specialized
+  tasks such as legal, code, or healthcare retrieval.
+type: software
 authors:
-  - family-names: Druskat
-    given-names: Stephan
-    orcid: https://orcid.org/1234-5678-9101-1121
-title: "My Research Software"
-version: 2.0.4
+  - given-names: Niklas Muennighoff
+    affiliation: Stanford University and Contextual AI
+    email: n.muennighoff@gmail.com
 identifiers:
   - type: doi
-    value: 10.5281/zenodo.1234
-date-released: 2021-08-11
+    value: 10.48550/ARXIV.2210.07316
+  - type: url
+    value: 'https://arxiv.org/abs/2210.07316'
+repository-code: 'https://github.com/embeddings-benchmark/mteb'
+url: 'https://embeddings-benchmark.github.io/mteb/'
+license: Apache-2.0
