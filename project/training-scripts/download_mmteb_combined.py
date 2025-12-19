@@ -11,7 +11,7 @@ from collections import defaultdict
 print("📥 Downloading MMTEB TurkicClassification dataset...")
 print("=" * 70)
 
-dataset = load_dataset("mteb/TurkicClassification")
+dataset = load_dataset("mteb/TurkicClassification", "ba")
 train_data = dataset['train']
 
 print(f"✅ Downloaded successfully!")
