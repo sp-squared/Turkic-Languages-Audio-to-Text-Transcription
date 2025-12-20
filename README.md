@@ -79,15 +79,15 @@ Whisper's open-endedness allowed me to very quickly prototype an ASR to Kazakh t
                      ▼
 ┌─────────────────────────────────────────────────────────┐
 │              Whisper ASR (OpenAI)                       │
-│  • Bashkir → use Kazakh (kk) model                     │
-│  • Kazakh → use Kazakh (kk) model                      │
-│  • Kyrgyz → use Kyrgyz (ky) model                      │
+│  • Bashkir → use Kazakh (kk) model                      │
+│  • Kazakh → use Kazakh (kk) model                       │
+│  • Kyrgyz → use Kyrgyz (ky) model                       │
 └────────────────────┬────────────────────────────────────┘
                      │
                      ▼
 ┌─────────────────────────────────────────────────────────┐
 │         Deterministic Orthography Corrector             │
-│  • Character substitutions (ұ→у, і→и, ғ→х)             │
+│  • Character substitutions (ұ→у, і→и, ғ→х)              │
 │  • Selective preservation (қ in specific words)         │
 │  • Context-aware variations (был/бил/буд)               │
 │  • Word transformations (қойыруқ→қойрук)                │
