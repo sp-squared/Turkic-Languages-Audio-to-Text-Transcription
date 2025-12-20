@@ -61,7 +61,9 @@ Whisper's open-endedness allowed me to very quickly prototype an ASR to Kazakh t
 ### Potential Community Impact
 ![screenshot](/project/images/dev16.png)
 
+#### Invitation for Collaborative Development
 
+This project establishes infrastructure for Turkic language speech recognition. Its long-term utility depends on community engagement. We invite researchers, linguists, and developers to collaborate on refining the orthographic rules, testing the system with diverse audio data, and extending support to additional Turkic languages. Together, we can improve the accuracy and scope of these open-source tools.
 
 ## 🎯 Supported Languages
 
