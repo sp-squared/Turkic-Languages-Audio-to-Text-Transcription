@@ -11,33 +11,33 @@ import sys
 # =============== CONFIGURATION ===============
 
 # Base directory - GitHub repository root
-BASE_DIR = Path(r"YOUR DIRECTORY")
+BASE_DIR = Path(r"/home/thinkpad/Documents/Github/")
 
 # Data directory - where raw files are located
-DATA_DIR = BASE_DIR / "project" / "data"
+DATA_DIR = BASE_DIR / "Turkic-Languages-Audio-to-Text-Transcription" / "project" / "data"
 
 # Training data directory - where processed files and models go
-TRAINING_DIR = BASE_DIR / "project" / "training_data"
+TRAINING_DIR = BASE_DIR / "Turkic-Languages-Audio-to-Text-Transcription" / "project" / "training_data"
 
-# Input files (raw data files)
+# Input files (raw data files) -> test difference between cleaned and non-cleaned text
 RAW_FILES = {
-    "bashkir": DATA_DIR / "bashkir_clean_cyrillic_base.txt",
-    "kazakh": DATA_DIR / "kazakh_clean_cyrillic_base.txt",
-    "kyrgyz": DATA_DIR / "kyrgyz_clean_cyrillic_base.txt",
+    "bashkir": DATA_DIR / "turkic_bashkir_classification_results.txt",
+    "kazakh": DATA_DIR / "turkic_kazakh_classification_results.txt",
+    "kyrgyz": DATA_DIR / "turkic_bashkir_classification_results.txt",
 }
 
 # Output cleaned files (if needed for further processing)
-CLEAN_FILES = {
-    "bashkir": TRAINING_DIR / "bashkir_clean_cyrillic.txt",
-    "kazakh": TRAINING_DIR / "kazakh_clean_cyrillic.txt",
-    "kyrgyz": TRAINING_DIR / "kyrgyz_clean_cyrillic.txt",
-}
+#CLEAN_FILES = {
+#    "bashkir": TRAINING_DIR / "bashkir_clean_cyrillic.txt",
+#    "kazakh": TRAINING_DIR / "kazakh_clean_cyrillic.txt",
+#    "kyrgyz": TRAINING_DIR / "kyrgyz_clean_cyrillic.txt",
+#}
 
 # Model files
 MODEL_FILES = {
     "sklearn": TRAINING_DIR / "turkic_classifier.pkl",
-    "fasttext": TRAINING_DIR / "turkic_classifier.bin",
-    "transformer": TRAINING_DIR / "turkic_classifier",
+    #"fasttext": TRAINING_DIR / "turkic_classifier.bin",
+    #"transformer": TRAINING_DIR / "turkic_classifier",
 }
 
 # =============== VERIFICATION ===============
