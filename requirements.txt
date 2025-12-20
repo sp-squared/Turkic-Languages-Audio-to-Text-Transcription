@@ -9,9 +9,12 @@ pandas>=1.3.0
 scikit-learn>=1.0.0
 openai-whisper
 joblib
+mteb
 # ============================================================================
 # OPTIONAL DEPENDENCIES
 # ============================================================================
+
+# mteb
 
 # For FastText model training
 # Uncomment to install:
