@@ -14,21 +14,21 @@ https://github.com/sp-squared/Turkic-Languages-Audio-to-Text-Transcription/blob/
 
 ## 📋 Table of Contents
 
-- [Overview](https://github.com/sp-squared/Turkic-Languages-Audio-to-Text-Transcription/blob/main/project/docs/TOOLKIT.md#-overview)
+- [Overview](md#-overview)
 - [Features](#-features)
-- [Quick Start](#quick-start)
-- [Installation](#installation)
-- [Usage](#usage)
+- [Quick Start](#-quick-start)
+- [Installation](#-installation)
+- [Usage](#-usage)
   - [Language Classification](#language-classification)
   - [Transliteration](#transliteration)
   - [Transcript Cleaning](#transcript-cleaning)
-- [Project Structure](#project-structure)
-- [Training Your Own Models](#training-your-own-models)
-- [Results](#results)
-- [Documentation](#documentation)
-- [Contributing](#contributing)
-- [Citation](#citation)
-- [License](#license)
+- [Project Structure](#-project-structure)
+- [Training Your Own Models](#-training-your-own-models)
+- [Results](#-results)
+- [Documentation](#-documentation)
+- [Contributing](#-contributing)
+- [Citation](#-citation)
+- [License](#-license)
 
 ---
 
