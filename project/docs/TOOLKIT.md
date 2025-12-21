@@ -23,7 +23,7 @@ https://github.com/sp-squared/Turkic-Languages-Audio-to-Text-Transcription/blob/
   - [Transliteration](#transliteration)
   - [Transcript Cleaning](#transcript-cleaning)
 - [Project Structure](#-project-structure)
-- [Training Your Own Models](#-training-your-own-models)
+- [Training Your Own Models](#%EF%B8%8F-training-your-own-models)
 - [Results](#-results)
 - [Documentation](#-documentation)
 - [Contributing](#-contributing)
