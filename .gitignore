@@ -17,7 +17,7 @@ dist/
 *.egg-info/
 
 # Output files
-output/*.txt
+audio/*.txt
 output/*.json
 output/*.log
 
