@@ -538,6 +538,17 @@ If you use this project or the TurkicClassification dataset in your research, pl
 If you use this work in your research, please cite:
 
 ```bibtex
+@software{Niklas_Muennighoff_Multilingual_Text_Embedding_Benchmark,
+author = {Niklas Muennighoff},
+license = {Apache-2.0},
+title = {{MTEB: Massive Text Embedding Benchmark}},
+url = {https://github.com/embeddings-benchmark/mteb}
+year={2022}
+note = {Multimodal toolbox for evaluating embeddings and retrieval systems}
+}
+```
+
+```bibtex
 @software{turkic_asr_2025,
   author = {Colin Morris},
   title = {Turkic Languages Audio-to-Text Transcription: 
