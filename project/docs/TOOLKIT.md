@@ -14,7 +14,7 @@ https://github.com/sp-squared/Turkic-Languages-Audio-to-Text-Transcription/blob/
 
 ## 📋 Table of Contents
 
-- [Overview](md#-overview)
+- [Overview](#-overview)
 - [Features](#-features)
 - [Quick Start](#-quick-start)
 - [Installation](#-installation)
