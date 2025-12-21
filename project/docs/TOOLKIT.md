@@ -11,7 +11,7 @@ A comprehensive toolkit for Turkic language processing, including text classific
 
 ## 📋 Table of Contents
 
-- [Overview](#overview)
+- [Overview](##overview)
 - [Features](#features)
 - [Quick Start](#quick-start)
 - [Installation](#installation)
