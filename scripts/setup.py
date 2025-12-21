@@ -11,7 +11,7 @@ import sys
 # =============== CONFIGURATION ===============
 
 # Base directory - GitHub repository root
-BASE_DIR = Path(r"/home/thinkpad/Documents/Github/")
+BASE_DIR = Path(r"C:\Users\morri\OneDrive\Documents\GitHub")
 
 # Data directory - where raw files are located
 DATA_DIR = BASE_DIR / "Turkic-Languages-Audio-to-Text-Transcription" / "project" / "data"

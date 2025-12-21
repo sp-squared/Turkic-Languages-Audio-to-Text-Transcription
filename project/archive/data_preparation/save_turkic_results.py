@@ -20,7 +20,7 @@ def has_latin_characters(s):
 
 # Load dataset
 print("Loading dataset...")
-dataset = load_dataset("mteb/TurkicClassification", "kk")
+dataset = load_dataset("mteb/TurkicClassification", "ky")
 print(f"✓ Loaded {len(dataset['train'])} samples\n")
 
 # Process and save results
@@ -43,7 +43,7 @@ print(f"✓ Processed {len(results)} samples")
 print(f"✓ Converted {converted_count} samples from Latin to Cyrillic\n")
 
 # Define output path - changed to network location
-output_path = r'/home/colin/Turkic-Languages-Audio-to-Text-Transcription/project/data/turkic_bashkir_classification_results.txt'
+output_path = r'/home/thinkpad/Documents/Github/Turkic-Languages-Audio-to-Text-Transcription/project/data/turkic_kyrgyz_classification_results.txt'
 
 # Ensure the directory exists (for network paths, ensure you have permissions)
 try:

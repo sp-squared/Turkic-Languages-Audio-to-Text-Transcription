@@ -6,18 +6,21 @@ import whisper
 import joblib
 
 def main():
-    if len(sys.argv) != 2:
-        print("Usage: python transcribe_and_tag.py <audio.mp3>")
-        sys.exit(1)
+    #if len(sys.argv) != 2:
+    #    print("Usage: python transcribe_and_tag.py <audio.mp3>")
+    #    sys.exit(1)
 
     audio_path = Path(sys.argv[1])
-    output_path = audio_path.with_name(audio_path.stem + "_labeled.txt")
+    output_path = audio_path.with_name(audio_path.stem + "_ba_labeled.txt")
 
     print("📦 Loading Whisper large-v3 (CPU)...")
     model = whisper.load_model("large-v3")  # runs on CPU by default
 
     print("🧠 Loading language ID model...")
-    langid = joblib.load("training_data/langid_sklearn_model.pkl")
+    SCRIPT_DIR = Path(__file__).resolve().parent      # /audio
+    PROJECT_ROOT = SCRIPT_DIR.parent                  # project root
+    MODEL_PATH = PROJECT_ROOT / "project" / "training_data" / "turkic_classifier.pkl"
+    langid = joblib.load(MODEL_PATH)
 
     print("🎤 Transcribing...")
     result = model.transcribe(str(audio_path), verbose=False)

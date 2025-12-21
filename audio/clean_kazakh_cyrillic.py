@@ -1,8 +1,8 @@
 import re
 import os
 
-input_path = r"\\system-files\G\Bashqort\turkic_classification_results_kazakh.txt"
-output_path = r"\\system-files\G\Bashqort\kazakh_clean_cyrillic.txt"
+input_path = "C:/Users/morri/OneDrive/Documents/GitHub/Turkic-Languages-Audio-to-Text-Transcription/audio/speaker1_003_labeled_corrected.txt"
+output_path = "C:/Users/morri/OneDrive/Documents/GitHub/Turkic-Languages-Audio-to-Text-Transcription/audio/speaker1_003_cleaned.txt"
 
 def is_meaningful_kazakh(text):
     if not text.strip():
