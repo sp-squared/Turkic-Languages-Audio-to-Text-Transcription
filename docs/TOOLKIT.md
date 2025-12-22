@@ -7,9 +7,6 @@ A comprehensive toolkit for Turkic language processing, including text classific
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 ![Static Badge](https://img.shields.io/badge/This%20is%20the%20frontier.-8A2BE2)
 
-
-https://github.com/sp-squared/Turkic-Languages-Audio-to-Text-Transcription/blob/main/project/docs/TOOLKIT.md#-overview
-
 ---
 
 ## 📋 Table of Contents
