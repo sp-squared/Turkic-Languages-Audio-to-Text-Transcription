@@ -20,7 +20,7 @@ Open-source Automatic Speech Recognition (ASR) pipeline for Bashkir (Bashkort), 
 
 ## 📖 Background & Motivation
 
-Whisper's open-endedness allowed me to very quickly prototype an ASR to Kazakh text pipeline with the intention of improving language detection among Bashkir (Башҡорт), Kazakh, and Kyrgyz. I was able to get my local setup using Whisper ASR to replicate similar sentence[s] seen on NoteGPT.
+Whisper's broad multilingual training allowed me to very quickly prototype an ASR to Kazakh text pipeline with the intention of improving language detection among Bashkir (Башҡорт), Kazakh, and Kyrgyz. I was able to get my local setup using Whisper ASR to replicate similar sentence[s] seen on NoteGPT. While Whisper itself is not open-ended (it has a fixed objective), it could enable open-ended human-machine collaboration.
 
 ## 📸 Screenshots
 
