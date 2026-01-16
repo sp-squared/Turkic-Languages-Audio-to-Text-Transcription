@@ -532,7 +532,7 @@ This completes the open science cycle: we benefit from open resources and contri
 
 MIT License
 
-Copyright (c) 2024 Colin Morris-Moncada
+Copyright (c) 2025 Colin Morris-Moncada
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
