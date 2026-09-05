@@ -752,8 +752,8 @@ note = {Multimodal toolbox for evaluating embeddings and retrieval systems}
 ```
 
 ```bibtex
-@software{Colin_Morris_Turkic_Languages_Audio_to_Text_Transcription,
-  author = {Colin Morris},
+@software{Colin_Morris_Moncada_Turkic_Languages_Audio_to_Text_Transcription,
+  author = {Colin Morris-Moncada},
   license = {MIT},
   title = {Turkic Languages Audio-to-Text Transcription: 
            Deterministic ASR Pipeline for Bashkir, Kazakh, and Kyrgyz},
